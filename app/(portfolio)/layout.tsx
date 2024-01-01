@@ -23,7 +23,7 @@ export default function RootLayout({
         <Grid item xs={12}>
           <AppBar position="fixed" color='primary'>
           <Grid container ml={4} display={"flex"} justifyContent={"space-evenly"} p={2}> 
-            <Grid item xs={5} display={"flex"} alignItems={'center'} columnGap={2}>
+            <Grid item md={4} xs={12} display={"flex"} alignItems={'center'} columnGap={2}>
               <Avatar >NV</Avatar>
               <Typography
               component="h1"
@@ -32,11 +32,13 @@ export default function RootLayout({
               Nune Vinay Kumar
             </Typography>
             </Grid>
-            <Grid item xs={6} display={"flex"} alignItems={'center'} justifyContent={"space-between"} >
-              <Box display={"flex"} justifyContent={"space-between"} columnGap={3} mr={6}>
+            <Grid item md={4} xs={12} display={"flex"} alignItems={'center'} justifyContent={"space-between"} >
+              <Box display={"flex"} justifyContent={"space-between"} columnGap={1} >
                 {MenuList.map((menu,index)=><PopOverMenu key={index} menu={menu}/>)}
               </Box>
-              <IconButton color="inherit">
+            </Grid>
+            <Grid item md={4} xs={12}>
+            <IconButton color="inherit">
                 <TwitterIcon/>
               </IconButton>
               <IconButton color="inherit">
